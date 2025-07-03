@@ -12,18 +12,7 @@
         <img class="logo" src="assets/ELEGANZA CUP - PADEL N.png" alt="logo eleganza negro" />
     </header>
     
-    <!-- <nav>
-        
-        <ul class="nav-bar">
 
-            <li>Todo</li>
-            <li>Hombre</li>
-            <li>Mujer</li>
-            <li>Outlet</li>
-
-        </ul>    
-    </nav> -->
-    
     <section class="hero">
         <img class="hero-image" src="assets/BANNER - Eleganza - Padel 13 de Julio 1.jpg" alt="Hero Image"  />
     </section>
@@ -36,45 +25,45 @@
             <div class="progreso" id="progreso"></div>
         </div>
 
-        <form id="formulario" class="form-box">
+        <form id="formulario" class="form-box" novalidate>
             <div class="paso activo">
                 <!-- Paso 1 -->
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <label for="nombre" >Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" autocomplete="given-name" required>
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
                 <!-- Paso 2 -->
                 <label for="apellidos">Apellidos:</label>
-                <input type="text" id="apellidos" name="apellidos" required>
+                    <input type="text" id="apellidos" name="apellidos" autocomplete="family-name" required>
                 <button type="button" class="anterior">Atrás</button>
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
                 <!-- Paso 3 -->
                 <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                    <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" autocomplete="bday" required>
                 <button type="button" class="anterior">Atrás</button>
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
                     <!-- Paso 4 -->
                 <label for="telefono">Teléfono:</label>
-                <input type="tel" id="telefono" name="telefono" required>
+                    <input type="tel" id="telefono" name="telefono" autocomplete="tel" minlength="10" required>
                 <button type="button" class="anterior">Atrás</button>
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
                     <!-- Paso 5 -->
                 <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" required>
+                    <input type="email" id="email" name="email" autocomplete="email" required>
                 <button type="button" class="anterior">Atrás</button>
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
                 <!-- Paso 6 -->
                 <label for="genero">Género:</label>
-                <select id="genero" name="genero" required>
+                <select id="genero" name="genero" autocomplete="sex" required>
                     <option value="" disabled selected>Selecciona un género</option>
                     <option value="masculino">Masculino</option>
                     <option value="femenino">Femenino</option>
@@ -103,11 +92,22 @@
                 <button type="button" class="siguiente">Siguiente</button>
             </div>
             <div class="paso">
-                <!-- Paso final -->
-                 <
+                <!-- Paso final consentimiento antes de enviar-->
+                <label for="consentimiento">
+                    <input type="checkbox" id="consentimiento" name="consentimiento" required>
+                        Acepto los términos y condiciones
+                </label><br>
+                <label for="politica">
+                    <input type="checkbox" id="politica" name="politica" required>
+                        Acepto la política de privacidad y tratamiento de datos
+                </label>    
+                <button type="button" class="anterior">Atrás</button>
                 <button type="submit">Enviar</button>
             </div>
+            <label for="evento">
+                <input type="hidden" id="evento" name="evento" value="Eleganza Cup">
         </form>
+        <script src="./webapp.js"></script>
     </main>
 </body>
     <script src="./scripts.js"></script>
