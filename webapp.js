@@ -7,7 +7,8 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
 
   const response = await fetch('https://script.google.com/macros/s/AKfycby32ntqQnotOcZnvKNjCXAC5k84leLPqh49ZqDDubX2TFxPlUC8Ic2O4e2X9Hl3Lgz9/exec', {
     method: 'POST',
-    body: formData
+    mode: 'no-cors',
+    body: formData,
   });
 
   if (response.ok) {
