@@ -13,5 +13,5 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
 
   // Muestra confirmación sin verificar respuesta (porque no se puede)
   alert('✅ ¡Tus datos fueron enviados con éxito!');
-  form.reset();
+  reiniciarFormulario();
 });

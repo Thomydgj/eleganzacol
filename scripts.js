@@ -47,4 +47,19 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   mostrarPaso(pasoActual);
+
+  function reiniciarFormulario() {
+  const formulario = document.getElementById('formulario');
+  formulario.reset();
+
+  // Volver al primer paso
+  const pasos = document.querySelectorAll('.paso');
+  pasos.forEach(p => p.classList.remove('activo'));
+  pasos[0].classList.add('activo');
+
+  // Reiniciar barra de progreso
+  const progreso = document.getElementById('progreso');
+  if (progreso) progreso.style.width = '14.28%'; // o ajusta según pasos totales
+}
+
 });
