@@ -1,14 +1,23 @@
-document.addEventListener('DOMContentLoaded', () => {
-  const pasos = document.querySelectorAll('.paso');
-  const progreso = document.getElementById('progreso');
-  let pasoActual = 0;
 
-  function mostrarPaso(index) {
+  let pasoActual = 0;
+  const progreso = document.getElementById('progreso');
+  const pasos = document.querySelectorAll('.paso');
+
+    function mostrarPaso(index) {
     pasos.forEach((paso, i) => {
       paso.classList.toggle('activo', i === index);
     });
     actualizarBarraProgreso();
   }
+
+    function actualizarBarraProgreso() {
+    const porcentaje = ((pasoActual + 1) / pasos.length) * 100;
+    if (progreso) {
+      progreso.style.width = `${porcentaje}%`;
+    }
+  }
+
+document.addEventListener('DOMContentLoaded', () => {
 
   function validarPasoActual() {
     const inputs = pasos[pasoActual].querySelectorAll('input, select, textarea');
@@ -19,13 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     }
     return true;
-  }
-
-  function actualizarBarraProgreso() {
-    const porcentaje = ((pasoActual + 1) / pasos.length) * 100;
-    if (progreso) {
-      progreso.style.width = `${porcentaje}%`;
-    }
   }
 
   document.querySelectorAll('.siguiente').forEach(btn => {
@@ -50,16 +52,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
 });
 
- function reiniciarFormulario() {
+function reiniciarFormulario() {
   const formulario = document.getElementById('formulario');
   formulario.reset();
 
-  // Volver al primer paso
-  const pasos = document.querySelectorAll('.paso');
-  pasos.forEach(p => p.classList.remove('activo'));
-  pasos[0].classList.add('activo');
+  pasoActual = 0;
+  mostrarPaso(pasoActual);
 
-  // Reiniciar barra de progreso
   const progreso = document.getElementById('progreso');
-  if (progreso) progreso.style.width = '14.28%'; // o ajusta según pasos totales
+  if (progreso) {
+    progreso.style.width = `${((pasoActual + 1) / document.querySelectorAll('.paso').length) * 100}%`;
+  }
 }
