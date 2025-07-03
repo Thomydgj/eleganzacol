@@ -12,7 +12,7 @@
         <img class="logo" src="assets/ELEGANZA CUP - PADEL N.png" alt="logo eleganza negro" />
     </header>
     
-    <nav>
+    <!-- <nav>
         
         <ul class="nav-bar">
 
@@ -22,67 +22,93 @@
             <li>Outlet</li>
 
         </ul>    
-    </nav>
+    </nav> -->
     
     <section class="hero">
-        <img class="hero-image" src="assets/img_padel.jpg" alt="Hero Image"  />
+        <img class="hero-image" src="assets/BANNER - Eleganza - Padel 13 de Julio 1.jpg" alt="Hero Image"  />
     </section>
     <main class="colaboracion">
 
+        <h1> Obten un <span class="bono">BONO</span> exlusvo </h1>
+        <p>llenando el formulario</p>
+
+        <div class="barra-progreso">
+            <div class="progreso" id="progreso"></div>
+        </div>
+
+        <form id="formulario" class="form-box">
+            <div class="paso activo">
+                <!-- Paso 1 -->
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                <!-- Paso 2 -->
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                <!-- Paso 3 -->
+                <label for="fecha_nacimiento">Fecha de nacimiento:</label>
+                <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                    <!-- Paso 4 -->
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                    <!-- Paso 5 -->
+                <label for="email">Correo electrónico:</label>
+                <input type="email" id="email" name="email" required>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                <!-- Paso 6 -->
+                <label for="genero">Género:</label>
+                <select id="genero" name="genero" required>
+                    <option value="" disabled selected>Selecciona un género</option>
+                    <option value="masculino">Masculino</option>
+                    <option value="femenino">Femenino</option>
+                    <option value="otro">Prefiero no decir</option>
+                </select>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                <!-- ultimo Paso -->
+                <label for="marca">Marca de ropa favorita:</label>
+                <select id="marca" name="marca" required>
+                    <option value="" disabled selected>Selecciona una marca</option>
+                    <option value="boss">BOSS</option>
+                    <option value="psycho bunny">PSYCHO BUNNY</option>
+                    <option value="monastery">MONASTERY</option>
+                    <option value="clemont">CLEMONT</option>
+                    <option value="sprayground">SPRAYGROUND</option>
+                    <option value="ap crown">AP CROWN</option>
+                    <option value="diesel">DIESEL</option>
+                    <option value="girbaud">GIRBAUD</option>
+                    <option value="monoic">MONOIC</option>
+                    <option value="kipling">KIPLING</option>
+                </select>
+                <button type="button" class="anterior">Atrás</button>
+                <button type="button" class="siguiente">Siguiente</button>
+            </div>
+            <div class="paso">
+                <!-- Paso final -->
+                 <
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
     </main>
-    <form>
-        
-        <div class="nombre formulario">
-            <label for="nombre">Nombre:</label>
-            <input type="text" id="nombre" name="nombre" required><br><br>
-        </div>
-        <div class="apellidos formulario">
-            <label for="apellidos">Apellidos:</label>
-            <input type="text" id="apellidos" name="apellidos" required><br><br>
-        </div>
-        <div class="fecha_nacimiento formulario">
-            <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-            <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" required><br><br>
-        </div>
-
-        <div class="telefono formulario">
-            <label for="telefono">Teléfono:</label>
-            <input type="tel" id="telefono" name="telefono" required><br><br>
-        </div>
-
-        <div class="email formulario">
-            <label for="email">Correo electrónico:</label>
-            <input type="email" id="email" name="email" required><br><br>
-        </div>
-
-        <div class="genero formulario">
-            <label for="genero">Género:</label>
-            <select id="genero" name="genero" required>
-                <option value="" disabled selected>Selecciona un género</option>
-                <option value="masculino">Masculino</option>
-                <option value="femenino">Femenino</option>
-                <option value="otro">Otro</option>
-            </select><br><br>
-        </div>
-
-        <div class="marca formulario">
-            <label for="marca">Marca de ropa favorita:</label>
-            <select id="marca" name="marca" required>
-                <option value="" disabled selected>Selecciona una marca</option>
-                <option value="boss">BOSS</option>
-                <option value="psycho bunny">PSYCHO BUNNY</option>
-                <option value="monastery">MONASTERY</option>
-                <option value="clemont">CLEMONT</option>
-                <option value="sprayground">SPRAYGROUND</option>
-                <option value="ap crown">AP CROWN</option>
-                <option value="diesel">DIESEL</option>
-                <option value="girbaud">GIRBAUD</option>
-                <option value="monoic">MONOIC</option>
-                <option value="kipling">KIPLING</option>
-            </select><br><br>
-        </div>
-
-        <button type="submit">Enviar</button>
-    </form>
 </body>
+    <script src="./scripts.js"></script>
 </html>
