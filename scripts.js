@@ -48,7 +48,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mostrarPaso(pasoActual);
 
-  function reiniciarFormulario() {
+});
+
+ function reiniciarFormulario() {
   const formulario = document.getElementById('formulario');
   formulario.reset();
 
@@ -61,5 +63,3 @@ document.addEventListener('DOMContentLoaded', () => {
   const progreso = document.getElementById('progreso');
   if (progreso) progreso.style.width = '14.28%'; // o ajusta según pasos totales
 }
-
-});
