@@ -1,17 +1,22 @@
 document.getElementById('formulario').addEventListener('submit', async (e) => {
   e.preventDefault();
 
-  const form = e.target;
-  const formData = new FormData(form);
+  const consentimiento = document.getElementById('consentimiento');
+  const politica = document.getElementById('politica');
 
-  // Envío sin esperar respuesta (modo sin CORS)
+  if (!consentimiento.checked || !politica.checked) {
+    alert('❗ Debes aceptar los términos y la política de privacidad para continuar.');
+    return; // 🔒 Detiene el envío
+  }
+
+  const formData = new FormData(e.target);
+
   fetch('https://script.google.com/macros/s/AKfycby32ntqQnotOcZnvKNjCXAC5k84leLPqh49ZqDDubX2TFxPlUC8Ic2O4e2X9Hl3Lgz9/exec', {
     method: 'POST',
     mode: 'no-cors',
-    body: formData,
+    body: formData
   });
 
-  // Muestra confirmación sin verificar respuesta (porque no se puede)
-  alert('✅ ¡Tus datos fueron enviados con éxito!');
-  reiniciarFormulario();
+  alert('✅ ¡Datos enviados con éxito!');
+  reiniciarFormulario(); // 👈 Limpia el formulario para el siguiente usuario
 });
