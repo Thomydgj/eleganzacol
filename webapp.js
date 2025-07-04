@@ -1,13 +1,4 @@
 document.getElementById('formulario').addEventListener('submit', async (e) => {
-  e.preventDefault();
-
-  const consentimiento = document.getElementById('consentimiento');
-  const politica = document.getElementById('politica');
-
-  if (!consentimiento.checked || !politica.checked) {
-    alert('❗ Debes aceptar los términos y la política de privacidad para continuar.');
-    return; // 🔒 Detiene el envío
-  }
 
   const formData = new FormData(e.target);
 

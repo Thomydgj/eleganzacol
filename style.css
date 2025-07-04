@@ -105,14 +105,18 @@ header {
   padding: 10px 8px;
 }
 
-/* 🎯 Etiquetas de texto */
-label {
-
-}
-
 input {
   border: none;
   border-bottom: 1px solid gray;
 }
 
-
+button {
+  margin-top: 15px;
+  background-color: rgb(241, 204, 69);
+  color: black;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: medium;
+}
