@@ -145,3 +145,103 @@ button {
   display: none;
 
 }
+
+@media (min-width: 768px) and (max-width: 991px) {
+
+  .form-box {
+    width: 100%;
+    margin: 0 auto;
+    
+}
+
+  .caja-1, .caja-3{
+    display: inline-flex;
+    width: 45%;
+  }
+
+  .caja-2 {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .caja-genero{
+    margin: 0 auto;
+    gap: 25%;
+
+  }
+  .caja-fecha {
+    width: 47%;
+  }
+
+  .caja-4 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 15px;
+  }
+
+  .caja-5 {
+    width: 60%;
+    margin: 0 auto;
+    margin-top: 15px;
+    }
+  
+  .caja-consentimiento {
+    
+    width: 73%;
+
+  }
+  .caja{
+    padding: 10px 10px;
+  }
+
+}
+
+@media (min-width: 992px) {
+  .logo {
+    width: 20%;
+  }
+
+  .hero {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+  }
+
+  .hero-image {
+    width: 90%;
+    height: auto;
+    display: block;
+  }
+
+  .form-box {
+    width: 80%;
+    margin: 0 auto;
+    
+}
+
+  .caja-1, .caja-3, .caja-2, .caja-4{
+    display: inline-flex;
+    width: 40%;
+    margin-right: 10px;
+  }
+  .caja-5 {
+    width: 40%;
+    margin: 0 auto;
+    margin-top: 1%;
+    }
+
+  .caja{
+   
+    padding: 10px 10px;
+  }
+  .banner-bono {
+  
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+  }
+}
