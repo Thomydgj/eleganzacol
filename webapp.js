@@ -14,6 +14,7 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
   // Muestra la imagen después de desplazarse
   setTimeout(() => {
     document.getElementById('oferta').style.display = 'block';
+    document.querySelector('.whatsapp-btn').style.display = 'block';
     document.body.style.overflow = 'hidden'; // Evitar scroll al mostrar la imagen
   }, 300); // espera breve para que el scroll se complete visualmente
  
@@ -39,10 +40,12 @@ function reiniciarFormulario() {
 // Función para cerrar la imagen al hacer clic fuera de ella
 function cerrarAlClickFuera(e) {
   const imagen = document.getElementById('oferta');
+  const whatsappBtn = document.querySelector('.whatsapp-btn');
 
   // Si se hace clic fuera de la imagen
   if (!imagen.contains(e.target)) {
     imagen.style.display = 'none';
+    whatsappBtn.style.display = 'none';
     document.removeEventListener('click', cerrarAlClickFuera);
     document.body.style.overflow = 'auto'; // Restaurar scroll
     document.querySelectorAll('.hero-image,.colaboracion').forEach(element => {
