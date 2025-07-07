@@ -23,7 +23,7 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
   });
 
   // Reiniciar el formulario después de enviar
-  //reiniciarFormulario();
+  reiniciarFormulario();
 
   // Esperar un poco antes de permitir el cierre al hacer clic fuera
   setTimeout(() => {
