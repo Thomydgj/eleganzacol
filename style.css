@@ -146,6 +146,7 @@ button {
 
 }
 
+/* tablets vetical */
 @media (min-width: 576px) and (max-width: 810px) and (orientation: portrait) {
 
   .form-box {
@@ -196,6 +197,7 @@ button {
   }
 }
 
+/* tablets landscape */
 @media (min-width:811px) and (max-width: 1080px) and (orientation:landscape){
    .form-box {
     width: 100%;
@@ -245,7 +247,7 @@ button {
   }
 }
 
-
+/* desktop */
 @media (min-width: 1081px) {
   .logo {
     width: 20%;
