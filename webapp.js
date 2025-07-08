@@ -19,7 +19,7 @@ document.getElementById('formulario').addEventListener('submit', async (e) => {
   }, 300); // espera breve para que el scroll se complete visualmente
  
   document.querySelectorAll('.hero-image,.colaboracion').forEach(element => {
-    element.style.opacity = '0.3';
+    element.style.opacity = '0.1';
   });
 
   // Reiniciar el formulario después de enviar

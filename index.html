@@ -38,7 +38,7 @@
             <div class="caja-3">
                 <div class="caja caja-telefono">
                     <label for="telefono">Teléfono:</label>
-                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" minlength="10" maxlength="10" required>
+                        <input type="tel" id="telefono" name="telefono" autocomplete="tel" minlength="10" maxlength="10" pattern="[0-9]{10}" required>
                 </div>
                 <div class="caja caja-email">    
                     <label for="email">Correo electrónico:</label>
@@ -49,7 +49,7 @@
             <div class="caja-2">
                 <div class="caja caja-fecha">
                     <label for="fecha_nacimiento">Fecha de nacimiento:</label>
-                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" autocomplete="bday" required>
+                        <input type="date" id="fecha_nacimiento" name="fecha_nacimiento" autocomplete="bday" max="2015-12-31" required>
                 </div>
                 <div class="caja caja-genero">
                     <label for="genero">Género:</label>
